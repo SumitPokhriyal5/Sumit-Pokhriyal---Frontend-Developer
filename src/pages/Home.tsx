@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import IDOEventSection from "../components/IDOEventSection"
 import IntroSection from "../components/IntroSection"
 import Navbar from "../components/Navbar"
 
@@ -8,6 +9,7 @@ const Home = () => {
         <Navbar />
         <Banner />
         <IntroSection />
+        <IDOEventSection />
     </div>
   )
 }

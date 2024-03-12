@@ -9,6 +9,7 @@ export default {
     extend: {
       backgroundImage: {
         "banner-image": "url(/saviour-banner.webp)",
+        "ido-event": "url(/ido-event-bg.webp)",
       },
       fontFamily: {
         shojumaru: "Shojumaru",
