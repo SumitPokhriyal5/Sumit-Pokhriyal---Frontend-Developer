@@ -3,7 +3,36 @@
 @tailwind utilities;
 
 
-
+@keyframes leftFadeIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rightFadeIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-left-fade-in {
+    animation: leftFadeIn 1s ease-in-out forwards;
+  }
+  
+  .animate-right-fade-in {
+    animation: rightFadeIn 1s ease-in-out forwards;
+  }
+  
 
 
 * {

@@ -1,6 +1,49 @@
+import { useEffect, useRef } from 'react';
 import tokenomicsImage from '/tokenomics.webp';
 
 function TokenomicSection() {
+  const leftDivRef = useRef<HTMLDivElement>(null);
+  const rightDivRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const leftDivObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-left-fade-in");
+        } else {
+          entry.target.classList.remove("animate-left-fade-in");
+        }
+      });
+    });
+
+    const rightDivObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-right-fade-in");
+        } else {
+          entry.target.classList.remove("animate-right-fade-in");
+        }
+      });
+    });
+
+    if (leftDivRef.current) {
+      leftDivObserver.observe(leftDivRef.current);
+    }
+
+    if (rightDivRef.current) {
+      rightDivObserver.observe(rightDivRef.current);
+    }
+
+    // Cleanup function
+    return () => {
+      if (leftDivRef.current) {
+        leftDivObserver.unobserve(leftDivRef.current);
+      }
+      if (rightDivRef.current) {
+        rightDivObserver.unobserve(rightDivRef.current);
+      }
+    };
+  }, []);
     return (
       <div className="bg-black w-[100%] h-fit flex flex-col items-center text-white">
         <div className="bg-tokenomics-bg bg-no-repeat w-[100%] flex flex-col items-center p-[6rem_5%] max-[600px]:p-[6rem_10px]">
@@ -9,7 +52,7 @@ function TokenomicSection() {
               Tokenomics
             </h3>
             <div className="flex items-start justify-center max-[800px]:items-center max-[800px]:flex-col gap-[3rem] w-[100%] h-[100%]">
-              <div className="flex flex-col items-center w-[40%] max-[800px]:w-full">
+              <div ref={leftDivRef} className="flex flex-col items-center w-[40%] max-[800px]:w-full">
                 <div className="flex flex-col items-center justify-center ">
                   <div className="bg-[#ED0137] flex justify-center items-center translate-y-[2rem] rounded-[2rem] p-4 ">
                     <p className="font-shojumaru text-[1rem] text-white">
@@ -48,7 +91,7 @@ function TokenomicSection() {
                   </div>
                 </div>
               </div>
-              <div className="w-[60%] max-[800px]:w-full self-center">
+              <div ref={rightDivRef} className="w-[60%] max-[800px]:w-full self-center">
                 <div className="flex justify-center items-center">
                   <img
                     width={"100%"}

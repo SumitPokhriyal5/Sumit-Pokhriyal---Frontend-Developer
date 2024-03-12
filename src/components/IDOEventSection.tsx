@@ -1,8 +1,51 @@
+import { useEffect, useRef } from "react";
 import ConnectButton from "./ConnectButton";
 import copyIcon from '/copy-icon.png'
 
 
 function IDOEventSection() {
+    const leftDivRef = useRef<HTMLDivElement>(null);
+  const rightDivRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const leftDivObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-left-fade-in");
+        } else {
+          entry.target.classList.remove("animate-left-fade-in");
+        }
+      });
+    });
+
+    const rightDivObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-right-fade-in");
+        } else {
+          entry.target.classList.remove("animate-right-fade-in");
+        }
+      });
+    });
+
+    if (leftDivRef.current) {
+      leftDivObserver.observe(leftDivRef.current);
+    }
+
+    if (rightDivRef.current) {
+      rightDivObserver.observe(rightDivRef.current);
+    }
+
+    // Cleanup function
+    return () => {
+      if (leftDivRef.current) {
+        leftDivObserver.unobserve(leftDivRef.current);
+      }
+      if (rightDivRef.current) {
+        rightDivObserver.unobserve(rightDivRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="bg-black w-full h-fit flex flex-col items-center text-white">
       <div className="bg-ido-event w-full flex flex-col items-center p-[6rem_5%] max-[600px]:p-[6rem_10px]">
@@ -11,7 +54,7 @@ function IDOEventSection() {
             Participate in our IDO Event!
           </h3>
           <div className="flex items-start justify-center gap-[9rem] w-full max-[800px]:flex-col max-[800px]:items-center max-[600px]:gap-[3rem]">
-            <div className="w-1/2 max-[800px]:w-full flex flex-col items-center">
+            <div ref={leftDivRef} className="w-1/2 max-[800px]:w-full flex flex-col items-center">
               <p className="text-[1.1rem] font-zcool text-center leading-[2.5rem]">
                 During our IDO event, you will gain early access to our
                 revolutionary ecosystem, designed to empower everyone to share
@@ -94,7 +137,7 @@ function IDOEventSection() {
                 </div>
               </div>
             </div>
-            <div className="w-1/2 max-[800px]:w-full">
+            <div ref={rightDivRef} className="w-1/2 max-[800px]:w-full">
               <div>
                 <div className="flex justify-center translate-y-[35px]">
                   <div className="flex gap-[0.6rem]">

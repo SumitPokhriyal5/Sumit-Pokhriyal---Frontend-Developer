@@ -1,13 +1,56 @@
+import { useEffect, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 const FAQSection = () => {
+    const leftDivRef = useRef<HTMLDivElement>(null);
+  const rightDivRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const leftDivObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-left-fade-in");
+        } else {
+          entry.target.classList.remove("animate-left-fade-in");
+        }
+      });
+    });
+
+    const rightDivObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-right-fade-in");
+        } else {
+          entry.target.classList.remove("animate-right-fade-in");
+        }
+      });
+    });
+
+    if (leftDivRef.current) {
+      leftDivObserver.observe(leftDivRef.current);
+    }
+
+    if (rightDivRef.current) {
+      rightDivObserver.observe(rightDivRef.current);
+    }
+
+    // Cleanup function
+    return () => {
+      if (leftDivRef.current) {
+        leftDivObserver.unobserve(leftDivRef.current);
+      }
+      if (rightDivRef.current) {
+        rightDivObserver.unobserve(rightDivRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="bg-[#0B0A0B] w-11/12 flex flex-col items-center text-white">
       <h3 className="text-center text-samurai-red font-shojumaru text-[4.092rem] max-[1285px]:flex-col">
         FAQ
       </h3>
       <div className="flex max-[1200px]:flex-col items-center gap-[5rem] w-[100%]">
-        <div className="w-1/2 max-[1200px]:w-11/12 flex justify-center items-center">
+        <div ref={leftDivRef} className="w-1/2 max-[1200px]:w-11/12 flex justify-center items-center">
           <img
             width={"100%"}
             height={"auto"}
@@ -15,7 +58,7 @@ const FAQSection = () => {
             alt="site logo"
           />
         </div>
-        <div className="items-center justify-center w-1/2 max-[1200px]:w-11/12 flex flex-col gap-5 text-[1rem] max-[700px]:text-[0.6rem] font-shojumaru">
+        <div ref={rightDivRef} className="items-center justify-center w-1/2 max-[1200px]:w-11/12 flex flex-col gap-5 text-[1rem] max-[700px]:text-[0.6rem] font-shojumaru">
           <details className="transition duration-300 ease h-fit w-[100%] border-[1px] border-[#ED0137] rounded-[20px] p-[2rem] max-[700px]:p-[0.6rem]">
             <summary className="flex justify-between items-center text-center p-[0px_2rem] cursor-pointer w-[100%] ">
               <p>1</p>
