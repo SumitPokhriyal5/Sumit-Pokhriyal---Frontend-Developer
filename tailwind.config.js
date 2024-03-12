@@ -11,6 +11,7 @@ export default {
         "banner-image": "url(/saviour-banner.webp)",
         "ido-event": "url(/ido-event-bg.webp)",
         "tokenomics-bg": "url(/tokenomics-bg.webp)",
+        "roadmap-bg": "url(/road-map-bg.webp)",
       },
       fontFamily: {
         shojumaru: "Shojumaru",
