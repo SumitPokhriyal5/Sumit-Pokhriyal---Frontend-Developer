@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import IntroSection from "../components/IntroSection"
 import Navbar from "../components/Navbar"
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
         <Navbar />
         <Banner />
+        <IntroSection />
     </div>
   )
 }

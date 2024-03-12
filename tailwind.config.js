@@ -16,6 +16,11 @@ export default {
         "robo-mono": "Roboto Mono",
         inter: "Inter",
       },
+      colors: {
+        "samurai-red": "#ED0137",
+        "smurai-grade-red": "#D51B46",
+        "smurai-grade-orange": "#EE6910",
+      },
     },
   },
   plugins: [],
