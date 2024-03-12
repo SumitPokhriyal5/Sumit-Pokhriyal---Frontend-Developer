@@ -10,6 +10,7 @@ export default {
       backgroundImage: {
         "banner-image": "url(/saviour-banner.webp)",
         "ido-event": "url(/ido-event-bg.webp)",
+        "tokenomics-bg": "url(/tokenomics-bg.webp)",
       },
       fontFamily: {
         shojumaru: "Shojumaru",
