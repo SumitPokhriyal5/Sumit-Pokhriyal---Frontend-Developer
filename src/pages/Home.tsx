@@ -1,5 +1,6 @@
 import Banner from "../components/Banner"
 import FAQSection from "../components/FAQSection"
+import Footer from "../components/Footer"
 import IDOEventSection from "../components/IDOEventSection"
 import IntroSection from "../components/IntroSection"
 import Navbar from "../components/Navbar"
@@ -16,6 +17,7 @@ const Home = () => {
         <TokenomicSection />
         <RoadMapSection />
         <FAQSection />
+        <Footer />
     </div>
   )
 }
