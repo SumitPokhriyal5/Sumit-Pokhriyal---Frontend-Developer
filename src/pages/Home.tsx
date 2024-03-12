@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import FAQSection from "../components/FAQSection"
 import IDOEventSection from "../components/IDOEventSection"
 import IntroSection from "../components/IntroSection"
 import Navbar from "../components/Navbar"
@@ -14,6 +15,7 @@ const Home = () => {
         <IDOEventSection />
         <TokenomicSection />
         <RoadMapSection />
+        <FAQSection />
     </div>
   )
 }
