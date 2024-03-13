@@ -49,19 +49,19 @@ function IDOEventSection() {
   return (
     <div className="bg-black w-full h-fit flex flex-col items-center text-white">
       <div className="bg-ido-event w-full flex flex-col items-center p-[6rem_5%] max-[600px]:p-[6rem_10px]">
-        <div className="flex flex-col items-center w-full gap-[7rem]">
-          <h3 className="text-samurai-red font-shojumaru text-[3rem] text-center">
+        <div className="flex flex-col items-center w-full gap-[4rem]">
+          <h3 className="text-samurai-red font-shojumaru text-[2rem] text-center">
             Participate in our IDO Event!
           </h3>
           <div className="flex items-start justify-center gap-[9rem] w-full max-[800px]:flex-col max-[800px]:items-center max-[600px]:gap-[3rem]">
             <div ref={leftDivRef} className="w-1/2 max-[800px]:w-full flex flex-col items-center">
-              <p className="text-[1.1rem] font-zcool text-center leading-[2.5rem]">
+              <p className="text-[1.2rem] font-zcool text-center leading-[2.5rem]">
                 During our IDO event, you will gain early access to our
                 revolutionary ecosystem, designed to empower everyone to share
                 wealth and achieve success.
               </p>
               <div className="flex flex-col items-center justify-center">
-                <div className="bg-[#ED0137] flex justify-center items-center translate-y-[3.5rem] rounded-[2rem] p-6">
+                <div className="bg-[#ED0137] flex justify-center items-center translate-y-[2rem] rounded-[2rem] p-6">
                   <p className="font-shojumaru text-[1.2rem] text-white">
                     Token Info
                   </p>
@@ -139,7 +139,7 @@ function IDOEventSection() {
             </div>
             <div ref={rightDivRef} className="w-1/2 max-[800px]:w-full">
               <div>
-                <div className="flex justify-center translate-y-[35px]">
+                <div className="flex justify-center translate-y-[3.5rem]">
                   <div className="flex gap-[0.6rem]">
                     <div className="w-[4rem] h-[7rem] flex items-center justify-center p-[0.5%] bg-black rounded-[0.323rem] border-samurai-red border-[1px]">
                       <p className="text-[6rem] font-robo-mono font-bold">
@@ -171,7 +171,7 @@ function IDOEventSection() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-5 border-[#C4110C] border-[2px] items-center justify-center rounded-[20px] p-[3rem] max-[600px]:p-[2rem]">
-                  <p className="font-shojumaru text-[3rem] text-samurai-red">
+                  <p className="font-shojumaru text-[2rem] text-samurai-red mt-4">
                     PRESALE 1
                   </p>
                   <p className="font-zcool text-[1.2rem]">
@@ -204,10 +204,10 @@ function IDOEventSection() {
                     />
                   </div>
                   <div className="flex gap-[2rem] justify-center mt-[-1rem]">
-                    <button className="bg-gradient-to-r from-smurai-grade-red to-smurai-grade-orange rounded-[16.21px] p-[10px_3.5rem] text-[1rem] font-zcool mt-[4rem]">
+                    <button className="bg-gradient-to-r from-smurai-grade-red to-smurai-grade-orange rounded-[16.21px] p-[10px_2rem] text-[1rem] font-zcool mt-[4rem]">
                       Buy
                     </button>
-                    <button className="bg-gradient-to-r from-smurai-grade-red to-smurai-grade-orange rounded-[16.21px] p-[10px_2rem] text-[1rem] font-zcool mt-[4rem] ">
+                    <button className="bg-gradient-to-r from-smurai-grade-red to-smurai-grade-orange rounded-[16.21px] p-[10px_1.5rem] text-[1rem] font-zcool mt-[4rem] ">
                       Claim Drop
                     </button>
                   </div>

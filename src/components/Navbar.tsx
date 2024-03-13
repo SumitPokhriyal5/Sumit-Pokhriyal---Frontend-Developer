@@ -5,7 +5,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <div className="flex max-[1189px]:justify-between justify-evenly items-center h-fit w-[100%] p-[1rem_0%] absolute top-3">
+    <div className="flex justify-between items-center h-fit w-[100%] p-[1rem_5%] absolute top-3">
       <div className="h-fill flex items-center justify-between gap-3">
         <div className="group/menu relative max-[1189px]:flex hidden h-fill items-center justify-center cursor-pointer">
           <FiMenu className="text-white w-10 h-10" />
