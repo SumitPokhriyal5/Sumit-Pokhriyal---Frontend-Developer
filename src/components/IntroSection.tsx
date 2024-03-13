@@ -1,5 +1,5 @@
 import { FaChevronDown } from "react-icons/fa";
-import brickMatrixLogo from '/brick-matrix-logo.webp';
+import brickMatrixLogo from '/brick-matrix-logo.png';
 import { useEffect, useRef } from "react";
 
 function IntroSection() {

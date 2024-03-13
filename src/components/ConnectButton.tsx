@@ -8,7 +8,7 @@ function ConnectButton({textSize}: {textSize: string}) {
       onClick={() => {
         open();
       }}
-      className={`bg-gradient-to-r from-[#ED0137] to-[#EE6910] rounded-[1.544rem] p-[10px_12px] text-[${textSize}] font-inter font-semibold text-white shadow-lg`}
+      className={`bg-gradient-to-r from-[#ED0137] to-[#EE6910] rounded-[1.544rem] p-[10px_15px] text-[${textSize}] font-inter font-semibold text-white shadow-lg`}
     >
       Connect Wallet
     </button>

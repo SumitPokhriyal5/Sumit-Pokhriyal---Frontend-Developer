@@ -5,7 +5,7 @@ const Footer = () => {
     <img
       width={200}
       height={163}
-      src={"/saviour-logo.webp"}
+      src={"/saviour-logo.png"}
       alt="site logo"
     />
     <p

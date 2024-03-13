@@ -1,8 +1,8 @@
 import RoadMapCard from "./RoadMapCard";
-import card1 from "/card1.webp";
-import card2 from "/card2.webp";
-import card3 from "/card3.webp";
-import card4 from "/card4.webp";
+import card1 from "/card1.png";
+import card2 from "/card2.png";
+import card3 from "/card3.png";
+import card4 from "/card4.png";
 
 
 const RoadMapSection = () => {

@@ -8,10 +8,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "banner-image": "url(/saviour-banner.webp)",
-        "ido-event": "url(/ido-event-bg.webp)",
-        "tokenomics-bg": "url(/tokenomics-bg.webp)",
-        "roadmap-bg": "url(/road-map-bg.webp)",
+        "banner-image": "url(/saviour-banner.png)",
+        "ido-event": "url(/ido-event-bg.png)",
+        "tokenomics-bg": "url(/tokenomics-bg.png)",
+        "roadmap-bg": "url(/road-map-bg.png)",
       },
       fontFamily: {
         shojumaru: "Shojumaru",

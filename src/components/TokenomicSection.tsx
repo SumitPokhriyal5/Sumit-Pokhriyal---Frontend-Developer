@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import tokenomicsImage from '/tokenomics.webp';
+import tokenomicsImage from '/tokenomics.png';
 
 function TokenomicSection() {
   const leftDivRef = useRef<HTMLDivElement>(null);
